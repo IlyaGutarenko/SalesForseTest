@@ -5,6 +5,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import pages.HomePage;
+import pages.LoginPage;
 
 
 import java.util.concurrent.TimeUnit;
@@ -14,6 +16,8 @@ import static io.github.bonigarcia.wdm.WebDriverManager.chromedriver;
 public class BaseTest {
 
     WebDriver driver;
+    LoginPage loginPage;
+    HomePage homePage;
 
 
     @BeforeTest
@@ -24,6 +28,8 @@ public class BaseTest {
         //options.addArguments("--headless");
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        loginPage = new LoginPage(driver);
+        homePage = new HomePage(driver);
     }
 
     @AfterTest(alwaysRun = true)
