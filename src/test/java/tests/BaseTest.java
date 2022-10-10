@@ -5,8 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-import pages.HomePage;
-import pages.LoginPage;
+import pages.*;
 
 
 import java.util.concurrent.TimeUnit;
@@ -18,6 +17,9 @@ public class BaseTest {
     WebDriver driver;
     LoginPage loginPage;
     HomePage homePage;
+    AccountListPage accountListPage;
+    NewAccountPage newAccountPage;
+    AccountDetailsPage accountDetailsPage;
 
 
     @BeforeTest
@@ -30,11 +32,14 @@ public class BaseTest {
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         loginPage = new LoginPage(driver);
         homePage = new HomePage(driver);
+        accountListPage = new AccountListPage(driver);
+        newAccountPage = new NewAccountPage(driver);
+        accountDetailsPage = new AccountDetailsPage(driver);
     }
 
-    @AfterTest(alwaysRun = true)
-    public void tearDown() {
-        driver.quit();
-    }
+//    @AfterTest(alwaysRun = true)
+//    public void tearDown() {
+//        driver.quit();
+//    }
 
 }

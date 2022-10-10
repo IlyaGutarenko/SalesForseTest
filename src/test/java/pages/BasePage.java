@@ -6,7 +6,10 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 
 public abstract class BasePage {
-    String URL = "https://login.salesforce.com/";
+
+    public static final By NEW_BUTTON = By.xpath("//div[@title='New']");
+    public static final By SAVE_BUTTON = By.xpath("//button[@title='Save']");
+    String URL = "https://gutarenkocompany.lightning.force.com";
 
     WebDriver driver;
 

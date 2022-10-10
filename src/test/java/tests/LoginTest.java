@@ -17,5 +17,4 @@ public class LoginTest extends BaseTest {
         assertTrue(homePage.isPageOpen());
     }
 
-
 }
