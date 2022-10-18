@@ -21,8 +21,6 @@ public class Account {
     }
 
 
-
-
     String accountName;
     String website;
     String phone;
@@ -100,7 +98,7 @@ public class Account {
     }
 
     public void setBillingZipPostalCode(String billingZipPostalCode) {
-         this.billingZipPostalCode = billingZipPostalCode;
+        this.billingZipPostalCode = billingZipPostalCode;
     }
 
     public String getBillingCountry() {
@@ -142,7 +140,6 @@ public class Account {
     public void setShippingCountry(String shippingCountry) {
         this.shippingCountry = shippingCountry;
     }
-
 
 
     public String getAccountName() {

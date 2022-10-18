@@ -18,12 +18,13 @@ public class AccountListPage extends BasePage {
 
     //логинимся
     //перейти в аккаунт
-    public AccountListPage open(){
+    public AccountListPage open() {
         driver.get(URL + "/lightning/o/Account/list?filterName=Recent");
         return this;
     }
+
     //нажать кнопку NEW
-    public NewAccountPage clickButtonNew(){
+    public NewAccountPage clickButtonNew() {
         driver.findElement(NEW_BUTTON).click();
         return new NewAccountPage(driver);
     }

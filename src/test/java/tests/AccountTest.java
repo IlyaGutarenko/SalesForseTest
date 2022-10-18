@@ -15,9 +15,9 @@ public class AccountTest extends BaseTest {
                 .open()
                 .isPageOpen();
         assertTrue(accountListPageIsOpen, "Страница AccountList не открылась");
-        Account account = new Account("Zel", "www","+1111111","2","Витебск","Витебск",
-                "123","Bel","Minsk", "Min", "321", "Bel",
-                "Hello", "test","test");
+        Account account = new Account("Zel", "www", "+1111111", "2", "Витебск", "Витебск",
+                "123", "Bel", "Minsk", "Min", "321", "Bel",
+                "Hello", "test", "test");
         accountListPage.open()
                 .clickButtonNew()
                 .create(account);

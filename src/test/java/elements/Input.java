@@ -15,8 +15,7 @@ public class Input {
     String inputIntoAccountLocator = "//div[contains(@class, 'modal-body')]//span[text() = '%s']/ancestor::div[contains(@class, 'uiInput')]//input";
 
 
-
-    public void write(String text){
+    public void write(String text) {
         driver.findElement(By.xpath(String.format(inputIntoAccountLocator, this.label))).sendKeys(text);
     }
 }

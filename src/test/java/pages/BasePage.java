@@ -19,7 +19,7 @@ public abstract class BasePage {
 
     public abstract boolean isPageOpen();
 
-    protected boolean isExist(By locator){
+    protected boolean isExist(By locator) {
         try {
             return driver.findElement(locator).isDisplayed();
         } catch (NoSuchElementException ex) {

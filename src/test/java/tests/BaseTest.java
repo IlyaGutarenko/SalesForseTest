@@ -1,10 +1,15 @@
 package tests;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 import pages.*;
 
 
@@ -23,12 +28,22 @@ public class BaseTest {
 
 
     @BeforeTest
-    public void setUp() {
-        chromedriver().setup();
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--start-maximized");
-        //options.addArguments("--headless");
-        driver = new ChromeDriver(options);
+    @Parameters({"browser"})
+    public void setUp(@Optional("chrome") String browser) {
+        if (browser.equals("chrome")) {
+            chromedriver().setup();
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--start-maximized");
+            //options.addArguments("--headless");
+            driver = new ChromeDriver(options);
+        } else {
+            WebDriverManager.edgedriver().setup();
+            driver = new EdgeDriver();
+        }
+
+
+
+
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         loginPage = new LoginPage(driver);
         homePage = new HomePage(driver);
@@ -37,9 +52,9 @@ public class BaseTest {
         accountDetailsPage = new AccountDetailsPage(driver);
     }
 
-//    @AfterTest(alwaysRun = true)
-//    public void tearDown() {
-//        driver.quit();
-//    }
+    @AfterTest(alwaysRun = true)
+    public void tearDown() {
+        driver.quit();
+    }
 
 }
