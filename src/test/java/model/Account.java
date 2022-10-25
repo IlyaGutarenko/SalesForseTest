@@ -1,8 +1,34 @@
 package model;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+@Builder
 public class Account {
 
-    public Account(String accountName, String website, String phone, String employees, String billingCity, String billingStateProvince, String billingZipPostalCode, String billingCountry, String shippingCity, String shippingStateProvince, String shippingZipPostalCode, String shippingCountry, String description, String billingStreet, String shippingStreet) {
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getIndustry() {
+        return industry;
+    }
+
+    public void setIndustry(String industry) {
+        this.industry = industry;
+    }
+
+    public Account(String accountName, String website, String phone, String employees, String billingCity, String billingStateProvince, String billingZipPostalCode, String billingCountry, String shippingCity, String shippingStateProvince, String shippingZipPostalCode, String shippingCountry, String description, String billingStreet, String shippingStreet, String industry, String type) {
         this.accountName = accountName;
         this.website = website;
         this.phone = phone;
@@ -18,6 +44,9 @@ public class Account {
         this.description = description;
         this.billingStreet = billingStreet;
         this.shippingStreet = shippingStreet;
+        this.industry = industry;
+        this.type = type;
+
     }
 
 
@@ -36,6 +65,8 @@ public class Account {
     String description;
     String billingStreet;
     String shippingStreet;
+    String type;
+    String industry;
 
     public String getDescription() {
         return description;

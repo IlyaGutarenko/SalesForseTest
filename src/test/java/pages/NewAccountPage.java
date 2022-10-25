@@ -1,5 +1,6 @@
 package pages;
 
+import elements.DropDown;
 import elements.Input;
 import elements.TextArea;
 import model.Account;
@@ -31,6 +32,8 @@ public class NewAccountPage extends BasePage {
         new TextArea(driver, "Description").writeTextArea(account.getDescription());
         new TextArea(driver, "Billing Street").writeTextArea(account.getBillingStreet());
         new TextArea(driver, "Shipping Street").writeTextArea(account.getShippingStreet());
+        new DropDown(driver,"Industry").selectOptionsAccount(account.getIndustry());
+        new DropDown(driver, "Type").selectOptionsAccount(account.getType());
 
         return clickSave();
     }

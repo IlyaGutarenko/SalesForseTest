@@ -17,5 +17,6 @@ public class Input {
 
     public void write(String text) {
         driver.findElement(By.xpath(String.format(inputIntoAccountLocator, this.label))).sendKeys(text);
+
     }
 }
