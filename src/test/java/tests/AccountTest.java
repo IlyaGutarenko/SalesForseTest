@@ -26,12 +26,12 @@ public class AccountTest extends BaseTest {
         assertEquals(account.getAccountName(),accountDetailsPage.getTextByTextByField("Account Name"));
         assertEquals(account.getType(),accountDetailsPage.getTextByTextByField("Type"));
         assertEquals(account.getWebsite(),accountDetailsPage.getTextByUrlByField("Website"));
-//        assertEquals(account.getPhone(),accountDetailsPage.getTextByNumberByField("Phone"));
-//        assertEquals(account.getEmployees(),accountDetailsPage.getTextByNumberByField("Employees"));
-//        assertEquals(account.getBillingCity(),accountDetailsPage.getTextByTextByField("Billing City"));
-//        assertEquals(account.getBillingStateProvince(),accountDetailsPage.getTextByTextByField("Billing State/Province"));
+        assertEquals(account.getPhone(),accountDetailsPage.getTextByPhoneByField("Phone"));
+        assertEquals(account.getEmployees(),accountDetailsPage.getTextByNumberByField("Employees"));
+//        assertEquals(account.getBillingCity(),accountDetailsPage.getTextByAddressByField("Billing City"));
+//        assertEquals(account.getBillingStateProvince(),accountDetailsPage.getTextByAddressByField("Billing State/Province"));
 //        assertEquals(account.getBillingZipPostalCode(),accountDetailsPage.getTextByTextByField("Billing Zip/Postal Code"));
-//        assertEquals(account.getBillingCountry(),accountDetailsPage.getTextByTextByField("Billing Country"));
+//        assertEquals(account.getBillingCountry(),accountDetailsPage.getTextByAddressByField("Billing Country"));
 //        assertEquals(account.getShippingCity(),accountDetailsPage.getTextByTextByField("Shipping City"));
 //        assertEquals(account.getShippingStateProvince(),accountDetailsPage.getTextByTextByField("Shipping State/Province"));
 //        assertEquals(account.getShippingZipPostalCode(),accountDetailsPage.getTextByTextByField("Shipping Zip/Postal Code"));

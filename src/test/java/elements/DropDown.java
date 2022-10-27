@@ -9,6 +9,8 @@ public class DropDown {
     String label;
     String inputIntoAccountLocator = "//div[contains(@class, 'modal-body')]//span[text() = '%s']/ancestor::div[contains(@class, 'uiInput')]//div[@class='uiMenu']";
     String optionLocator = "//div[contains(@class,'visible')]//a[text()='%s']";
+    String inputIntoContactsLocator = "//div[contains(@class, 'modal-body')]//span[text() = '%s']/ancestor::div[contains(@class, 'uiInput')]//div[@class='uiMenu']";
+    String optionContactsLocator = "//div[contains(@class,'visible')]//a[text()='%s']";
 
     public DropDown(WebDriver driver, String label) {
         this.driver = driver;

@@ -25,6 +25,9 @@ public class BaseTest {
     AccountListPage accountListPage;
     NewAccountPage newAccountPage;
     AccountDetailsPage accountDetailsPage;
+    ContactsListPage contactsListPage;
+    NewContactsPage newContactsPage;
+    ContactsDetailsPage contactsDetailsPage;
 
 
     @BeforeTest
@@ -50,6 +53,9 @@ public class BaseTest {
         accountListPage = new AccountListPage(driver);
         newAccountPage = new NewAccountPage(driver);
         accountDetailsPage = new AccountDetailsPage(driver);
+        contactsListPage = new ContactsListPage(driver);
+        newContactsPage = new NewContactsPage(driver);
+        contactsDetailsPage = new ContactsDetailsPage(driver);
     }
 
     @AfterTest(alwaysRun = true)
