@@ -1,10 +1,12 @@
-package pages;
+package pages.Account;
 
 import elements.DropDown;
 import elements.Input;
 import elements.TextArea;
 import model.Account;
 import org.openqa.selenium.WebDriver;
+import pages.Account.AccountDetailsPage;
+import pages.BasePage;
 
 public class NewAccountPage extends BasePage {
 

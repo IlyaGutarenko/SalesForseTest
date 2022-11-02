@@ -1,7 +1,7 @@
-package pages;
+package pages.Contacts;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import pages.BasePage;
 
 public class ContactsDetailsPage extends BasePage {
 

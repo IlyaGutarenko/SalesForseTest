@@ -5,10 +5,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.edge.EdgeOptions;
-import org.testng.ITestListener;
 import org.testng.annotations.*;
 import pages.*;
+import pages.Account.AccountDetailsPage;
+import pages.Account.AccountListPage;
+import pages.Account.NewAccountPage;
+import pages.Contacts.ContactsDetailsPage;
+import pages.Contacts.ContactsListPage;
+import pages.Contacts.NewContactsPage;
 import utils.Listener;
 
 

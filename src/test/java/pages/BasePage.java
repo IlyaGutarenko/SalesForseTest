@@ -10,9 +10,9 @@ public abstract class BasePage {
     public static final By NEW_BUTTON = By.xpath("//div[@title='New']");
     public static final By SAVE_BUTTON = By.xpath("//button[@title='Save']");
     public static final By DETAILS_TAB = By.xpath("//li[@data-tab-value='detailTab']");
-    String URL = "https://gutarenkocompany.lightning.force.com";
+    public String URL = "https://gutarenkocompany.lightning.force.com";
 
-    WebDriver driver;
+    public WebDriver driver;
 
     public BasePage(WebDriver driver) {
         this.driver = driver;

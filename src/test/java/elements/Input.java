@@ -13,7 +13,7 @@ public class Input {
     WebDriver driver;
     String label;
     String inputIntoAccountLocator = "//div[contains(@class, 'modal-body')]//span[text() = '%s']/ancestor::div[contains(@class, 'uiInput')]//input";
-    String inputIntoContactsLocator = "//div[contains(@class, 'modal-body')]//span[text()='%s']/ancestor::div[contains(@class, 'slds-form-element__control')]//input";
+    String inputIntoContactsLocator = "//div[contains(@class, 'modal-body')]//label[text()='%s']/ancestor::lightning-input[contains(@class, 'slds-form-element')]//input";
 
 
     public void write(String text) {

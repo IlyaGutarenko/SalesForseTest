@@ -18,11 +18,13 @@ public class ContactsTest extends BaseTest {
                         .open()
                         .isPageOpen();
         assertTrue(contactsListPageIsOpen,"Страница ContactsList не открылась");
-        //Contacts contacts = new Contacts("Mr.","Ilya","Zel","");
+        Contacts contacts = new Contacts("Dr.","Ilya","Zel","Gut", "ig", "Zel",
+                "Hello", "test@test.ru", "+11111", "+22222", "LA", "123", "DSK", "Vit",
+                "12345", "V", "Bel");
         contactsListPage
                 .open()
-                .clickButtonNew();
-//                .createContacts(contacts)
+                .clickButtonNew()
+                .createContacts(contacts);
 //                .openDetails();
 
 

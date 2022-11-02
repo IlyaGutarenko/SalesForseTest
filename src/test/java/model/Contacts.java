@@ -14,13 +14,14 @@ public class Contacts {
     String phone;
     String mobile;
     String department;
+    String fax;
     String mailingStreet;
     String mailingCity;
     String mailingZipPostalCode;
     String mailingStateProvince;
     String mailingCountry;
 
-    public Contacts(String salutation, String firstName, String middleName, String lastName, String suffix, String accountName, String title, String email, String phone, String mobile, String department, String mailingStreet, String mailingCity, String mailingZipPostalCode, String mailingStateProvince, String mailingCountry) {
+    public Contacts(String salutation, String firstName, String middleName, String lastName, String suffix, String accountName, String title, String email, String phone, String mobile, String department, String fax, String mailingStreet, String mailingCity, String mailingZipPostalCode, String mailingStateProvince, String mailingCountry) {
         this.salutation = salutation;
         this.firstName = firstName;
         this.middleName = middleName;
@@ -32,6 +33,7 @@ public class Contacts {
         this.phone = phone;
         this.mobile = mobile;
         this.department = department;
+        this.fax = fax;
         this.mailingStreet = mailingStreet;
         this.mailingCity = mailingCity;
         this.mailingZipPostalCode = mailingZipPostalCode;
@@ -125,6 +127,14 @@ public class Contacts {
 
     public void setDepartment(String department) {
         this.department = department;
+    }
+
+    public String getFax() {
+        return fax;
+    }
+
+    public void setFax(String fax) {
+        this.fax = fax;
     }
 
     public String getMailingStreet() {
