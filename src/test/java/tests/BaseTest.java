@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.testng.ITestContext;
 import org.testng.annotations.*;
 import pages.*;
 import pages.Account.AccountDetailsPage;
@@ -35,23 +36,24 @@ public class BaseTest {
 
 
     @BeforeTest
-    @Parameters({"browser"})
-    public void setUp(@Optional("chrome") String browser) {
-        if (browser.equals("chrome")) {
+//    @Parameters({"browser"})
+    public void setUp(ITestContext context) {
+//        if (browser.equals("chrome")) {
             chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--start-maximized");
 //            options.addArguments("--headless");
             driver = new ChromeDriver(options);
-        } else {
-            WebDriverManager.edgedriver().setup();
-            driver = new EdgeDriver();
-        }
+//        } else {
+//            WebDriverManager.edgedriver().setup();
+//            driver = new EdgeDriver();
+//        }
 
 
 
 
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        context.setAttribute("driver", driver);
         loginPage = new LoginPage(driver);
         homePage = new HomePage(driver);
         accountListPage = new AccountListPage(driver);
